@@ -1,0 +1,9 @@
+{
+  "name": "babel-plugin-not-js-import-remover",
+  "version": "0.1.0",
+  "description": "remove import statments that are importing not-js file",
+  "main": "index.js",
+  "author": "Kang-Jh",
+  "license": "MIT",
+  "private": false
+}
