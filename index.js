@@ -16,10 +16,16 @@ module.exports = function ({ types: t }) {
   return {
     visitor: {
       ImportDeclaration(path, state) {
-        const NOT_ALLOWED_EXTENSIONS = [
-          ...DEFAULT_NOT_ALLOWED_EXTENSIONS,
-          ...state.opts.extends,
-        ];
+        let NOT_ALLOWED_EXTENSIONS = DEFAULT_NOT_ALLOWED_EXTENSIONS;
+
+        if (state && state.opts) {
+          if (Array.isArray(state.opts.extends)) {
+            NOT_ALLOWED_EXTENSIONS = [
+              ...NOT_ALLOWED_EXTENSIONS,
+              ...state.opts.extends,
+            ];
+          }
+        }
         let source = path.node.source.value;
         source = source.split('.');
         const extension = source[source.length - 1];
