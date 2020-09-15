@@ -6,6 +6,16 @@ This plugin removes Not-Js Import from files.
 
 The original purpose is removing CSSs and images import statments from react components when trying to SSR.
 
+## Installation
+
+using npm:
+
+`npm install --save-dev babel-plugin-not-js-import-remover`
+
+or using yarn:
+
+`yarn add babel-plugin-not-js-import-remover -D`
+
 ## Caution
 
 You **Must** use this plugin before @babel/plugin-transform-modules-commonjs or plugins shuch that converting import statements to require calls,
