@@ -2,6 +2,12 @@
 
 This plugin removes Not-Js Import from files.
 
+## Recommendation
+
+**Use Frameworks like [Next.js](https://github.com/vercel/next.js). Don't try to reinvent the wheel.**
+
+It is better to use frameworks than creating custom solution. Handling webpack and babel to use css modules and image in js is painful.
+
 ## Purpose
 
 The original purpose is removing CSSs and images import statments from react components when trying to SSR.
